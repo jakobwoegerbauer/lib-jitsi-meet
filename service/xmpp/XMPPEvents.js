@@ -108,6 +108,10 @@ const XMPPEvents = {
     // received.
     MESSAGE_RECEIVED: 'xmpp.message_received',
 
+    // Designates an event indicating that an invite XMPP message in the MUC was
+    // received.
+    INVITE_MESSAGE_RECEIVED: 'xmpp.invite_message_received',
+
     // Designates an event indicating that a private XMPP message in the MUC was
     // received.
     PRIVATE_MESSAGE_RECEIVED: 'xmpp.private_message_received',
@@ -126,6 +130,15 @@ const XMPPEvents = {
 
     // Designates an event indicating that a participant left the XMPP MUC.
     MUC_MEMBER_LEFT: 'xmpp.muc_member_left',
+
+    // Designates an event indicating that a participant joined the lobby XMPP MUC.
+    MUC_LOBBY_MEMBER_JOINED: 'xmpp.muc_lobby_member_joined',
+
+    // Designates an event indicating that a participant in the lobby XMPP MUC has been updated
+    MUC_LOBBY_MEMBER_UPDATED: 'xmpp.muc_lobby_member_updated',
+
+    // Designates an event indicating that a participant was denied access to a conference from the lobby XMPP MUC.
+    MUC_DENIED_ACCESS: 'xmpp.muc_denied access',
 
     // Designates an event indicating that local participant left the muc
     MUC_LEFT: 'xmpp.muc_left',
@@ -186,6 +199,7 @@ const XMPPEvents = {
     ROOM_CONNECT_ERROR: 'xmpp.room_connect_error',
     ROOM_CONNECT_NOT_ALLOWED_ERROR: 'xmpp.room_connect_error.not_allowed',
     ROOM_JOIN_ERROR: 'xmpp.room_join_error',
+    ROOM_CONNECT_MEMBERS_ONLY_ERROR: 'xmpp.room_connect_error.members_only',
 
     /**
      * Indicates that max users limit has been reached.
